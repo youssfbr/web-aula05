@@ -1,9 +1,6 @@
 package com.github.youssfbr.web05.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Objects;
 
@@ -14,6 +11,8 @@ public class Product {
     private Long id;
     private String name;
     private Double price;
+    @ManyToOne
+    @JoinColumn(name = "category_id")
     private Category category;
 
     public Product() { }

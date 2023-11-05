@@ -14,7 +14,6 @@ public class CategoryRepository {
     public List<Category> findAll() {
         return new ArrayList<>(map.values());
     }
-
     public Category findById(Long id) {
         return map.get(id);
     }

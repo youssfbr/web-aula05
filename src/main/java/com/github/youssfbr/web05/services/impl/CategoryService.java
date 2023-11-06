@@ -24,7 +24,7 @@ public class CategoryService implements ICategoryService {
 
     @Override
     @Transactional(readOnly = true)
-    public Category findById(long id) {
+    public Category findById(Long id) {
         return categoryRepository.findById(id).orElseThrow(() -> new RuntimeException("Category NOT FOUND with ID: " + id));
     }
 }

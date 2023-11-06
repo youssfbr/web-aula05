@@ -14,8 +14,7 @@ public class Category {
     private Long id;
     private String name;
     @JsonIgnore
-    @OneToMany
-    @JoinTable(name = "tb_product_category")
+    @OneToMany(mappedBy = "category")
     private final List<Product> products = new ArrayList<>();
 
     public Category() { }
